@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fernando Prestes Godinho — PG SYSTEMS</title>
+<meta name="description" content="Desenvolvedor de sistemas de gestão que rodam no PC do cliente: Flask empacotado em .exe, licença Ed25519, cobrança e atualização automática. Três produtos em produção.">
+<meta name="theme-color" content="#08110F">
+<meta property="og:title" content="Fernando Prestes Godinho — PG SYSTEMS">
+<meta property="og:description" content="Sistemas de gestão que rodam no PC do cliente. Três produtos em produção, um servidor de licença multi-produto e uma central de alarmes 24/7.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/logo-pgsystems.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══ navegação ══════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav__in">
+    <a class="nav__brand" href="#topo"><span class="nav__dot" aria-hidden="true"></span>PG SYSTEMS</a>
+    <div class="nav__links">
+      <a href="#indice">Índice</a>
+      <a href="#espinha">Espinha dorsal</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#operacao">Operação</a>
+      <a href="#web">Web</a>
+      <a class="nav__cta" href="#contato">Falar comigo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ hero ═══════════════════════════════════════════════════════════ -->
+<header class="hero" id="topo">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="hero__id">Fernando Prestes Godinho · Desenvolvedor · São Roque, SP</p>
+      <h1>Sistemas que rodam <em>no PC do cliente.</em></h1>
+      <p class="hero__lede">
+        Faço software de gestão para negócios pequenos do interior: o programa
+        instala com um <b>.exe</b>, guarda os dados na máquina do dono e continua
+        funcionando <b>sem internet</b>. A licença, a cobrança e a atualização
+        vêm de um servidor só, que atende todos os produtos.
+      </p>
+      <div class="hero__facts">
+        <div class="fact"><b>3</b><span>produtos em produção</span></div>
+        <div class="fact"><b>24/7</b><span>central de alarmes ativa</span></div>
+        <div class="fact"><b>1</b><span>servidor de licença</span></div>
+        <div class="fact"><b>11</b><span>projetos neste índice</span></div>
+      </div>
+    </div>
+
+    <!-- elemento-assinatura: o handshake que abre todo produto -->
+    <div class="term" id="term">
+      <div class="term__bar">
+        <span class="term__led" id="term-led" aria-hidden="true"></span>
+        <span id="term-title">abrindo Garage 106 · v1.2</span>
+        <button class="term__replay" id="term-replay" type="button">rodar de novo</button>
+      </div>
+      <div class="term__body" id="term-body" aria-live="polite"></div>
+      <div class="term__mods" id="term-mods" aria-hidden="true"></div>
+      <p class="term__cap">É este handshake que decide o que o cliente vê quando abre o programa.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ══ índice ═════════════════════════════════════════════════════════ -->
+<section class="sec" id="indice">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Índice</p>
+      <h2 class="h-sec">Onze projetos, três formas de entregar.</h2>
+      <p class="lede">
+        Quatro produtos licenciados que instalam no cliente, quatro sistemas de
+        operação que rodam na base e três frentes de web. Clique numa linha para
+        ir direto ao projeto.
+      </p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filtrar projetos">
+      <button class="filter" type="button" data-filter="all" aria-pressed="true">Todos</button>
+      <button class="filter" type="button" data-filter="desktop" aria-pressed="false">Desktop licenciado</button>
+      <button class="filter" type="button" data-filter="nuvem" aria-pressed="false">Serviço na nuvem</button>
+      <button class="filter" type="button" data-filter="operacao" aria-pressed="false">Operação</button>
+      <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+    </div>
+
+    <table class="tbl" id="tbl">
+      <thead>
+        <tr>
+          <th scope="col">Chave / repo</th>
+          <th scope="col">Projeto</th>
+          <th scope="col" class="col-stack">Stack</th>
+          <th scope="col">Estado</th>
+          <th scope="col"><span class="sr-only"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-cat="desktop" data-go="garage106">
+          <td class="t-key">GRG-••••-••••-••••</td>
+          <td><div class="t-name">Garage 106</div><div class="t-desc">Ordens de serviço para oficina mecânica</div></td>
+          <td class="t-stack col-stack">Flask · SQLite · Nuitka · Inno Setup</td>
+          <td><span class="badge badge--prod"><i></i>Em produção</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="desktop" data-go="arena">
+          <td class="t-key">AMP-••••-••••-••••</td>
+          <td><div class="t-name">Arena AMP</div><div class="t-desc">Aulas, comandas e ranking de uma arena de beach tennis</div></td>
+          <td class="t-stack col-stack">Flask · SQLite · Nuitka · Inno Setup</td>
+          <td><span class="badge badge--prod"><i></i>Em produção</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="nuvem" data-go="licencas">
+          <td class="t-key">pg-systems-licencas</td>
+          <td><div class="t-name">Servidor de licença + painel</div><div class="t-desc">Licença, pagamento e atualização de todos os produtos</div></td>
+          <td class="t-stack col-stack">Flask · Postgres · Ed25519 · Mercado Pago</td>
+          <td><span class="badge badge--prod"><i></i>Em produção</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="nuvem" data-go="sync">
+          <td class="t-key">arena-sync</td>
+          <td><div class="t-name">Aulas na nuvem</div><div class="t-desc">A equipe abre pelo celular; o PC sincroniza depois</div></td>
+          <td class="t-stack col-stack">Flask · Postgres multi-tenant · PWA</td>
+          <td><span class="badge badge--prod"><i></i>Em produção</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="operacao" data-go="monitoramento">
+          <td class="t-key">monitoramento</td>
+          <td><div class="t-name">Central de monitoramento</div><div class="t-desc">Recebe o alarme, chama o operador, registra o atendimento</div></td>
+          <td class="t-stack col-stack">FastAPI · Postgres · WebSocket · Contact ID</td>
+          <td><span class="badge badge--prod"><i></i>24/7 na base</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="operacao" data-go="pgporter">
+          <td class="t-key">PGporter</td>
+          <td><div class="t-name">PGporter</div><div class="t-desc">Portaria atendida de longe ou na guarita</div></td>
+          <td class="t-stack col-stack">FastAPI · SQLAlchemy · adaptadores de hardware</td>
+          <td><span class="badge badge--dev"><i></i>Em construção</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="operacao" data-go="myip">
+          <td class="t-key">MyIp</td>
+          <td><div class="t-name">MyIp</div><div class="t-desc">Painel da rede local com análise de risco</div></td>
+          <td class="t-stack col-stack">Node · Express · PowerShell</td>
+          <td><span class="badge badge--dev"><i></i>Ferramenta interna</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="operacao" data-go="amt">
+          <td class="t-key">amt_automacao.py</td>
+          <td><div class="t-name">Automação do AMT Remoto</div><div class="t-desc">Robô de tela para o programa das centrais Intelbras</div></td>
+          <td class="t-stack col-stack">Python · PyAutoGUI · OpenCV</td>
+          <td><span class="badge badge--dev"><i></i>Ferramenta interna</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="web" data-go="site-pg">
+          <td class="t-key">site-pg</td>
+          <td><div class="t-name">PG Segurança Eletrônica</div><div class="t-desc">Site institucional que gera orçamento</div></td>
+          <td class="t-stack col-stack">HTML · CSS tokens · Netlify · Formspree</td>
+          <td><span class="badge badge--web"><i></i>No ar</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="web" data-go="siteamp">
+          <td class="t-key">arena-beach-tennis</td>
+          <td><div class="t-name">Arena AMP — site</div><div class="t-desc">Site do cliente, refeito em React</div></td>
+          <td class="t-stack col-stack">React 19 · Vite · Tailwind 4 · Router</td>
+          <td><span class="badge badge--web"><i></i>No ar</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="web" data-go="site-arena">
+          <td class="t-key">SiteArenaAMP</td>
+          <td><div class="t-name">Arena AMP — primeira versão</div><div class="t-desc">Onde a marca nasceu: HTML, CSS e JS na mão</div></td>
+          <td class="t-stack col-stack">HTML · CSS · JS · partials</td>
+          <td><span class="badge badge--web"><i></i>Arquivado</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="nocap" style="margin-top:28px">
+      <b>Sobre as telas deste portfólio.</b> Todos os prints são dos sistemas reais,
+      rodando. Os dados foram trocados por dados fictícios antes de cada captura —
+      nenhum cliente, veículo, aluno ou endereço real aparece aqui.
+    </p>
+  </div>
+</section>
+
+<!-- ══ espinha dorsal ═════════════════════════════════════════════════ -->
+<section class="sec" id="espinha">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Como isso se sustenta</p>
+      <h2 class="h-sec">Uma espinha dorsal, vários produtos.</h2>
+      <p class="lede">
+        Garage 106 e Arena AMP são o mesmo esqueleto: licença, cobrança,
+        atualização, backup e login já vêm prontos. Para atender um cliente novo
+        eu troco os módulos e a marca — o resto não se mexe. Clique numa peça.
+      </p>
+    </div>
+
+    <div class="spine" id="spine">
+      <button class="node" type="button" data-node="app" aria-pressed="true">
+        <span class="node__n">01 · no cliente</span>
+        <div class="node__t">App desktop</div>
+        <p class="node__s">Flask em 127.0.0.1 dentro de uma janela do Edge. Banco SQLite na máquina.</p>
+        <div class="node__where">%APPDATA%\&lt;produto&gt;\dados.db</div>
+      </button>
+      <button class="node" type="button" data-node="srv" aria-pressed="false">
+        <span class="node__n">02 · na nuvem</span>
+        <div class="node__t">Servidor de licença</div>
+        <p class="node__s">Um só, ciente de produto. Valida a chave, cobra e diz qual versão é a mínima.</p>
+        <div class="node__where">Render + Postgres (Supabase)</div>
+      </button>
+      <button class="node" type="button" data-node="sync" aria-pressed="false">
+        <span class="node__n">03 · opcional</span>
+        <div class="node__t">Espelho na nuvem</div>
+        <p class="node__s">Só onde faz sentido: a equipe usa pelo celular e o PC sincroniza depois.</p>
+        <div class="node__where">um schema Postgres por cliente</div>
+      </button>
+    </div>
+
+    <div class="spine__detail" id="spine-detail" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ══ produtos ═══════════════════════════════════════════════════════ -->
+<section id="produtos">
+
+  <!-- ── Garage 106 ── -->
+  <article class="case" id="garage106">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">GRG-••••-••••-•••• <span class="badge badge--prod"><i></i>Em produção desde ago/2026</span></p>
+          <h3>Garage 106</h3>
+          <p class="case__sub">
+            O sistema de uma oficina mecânica: abre a ordem de serviço, calcula
+            peça e mão de obra, recebe em partes e imprime dois papéis diferentes
+            — um para o cliente, outro para o mecânico.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Cliente</dt><dd>Oficina mecânica · instalado e licenciado</dd></div>
+          <div class="spec"><dt>Módulos</dt><dd><b>Ordens de serviço</b>, clientes e veículos, catálogo, relatórios</dd></div>
+          <div class="spec"><dt>Backend</dt><dd>Flask · SQLAlchemy · SQLite local</dd></div>
+          <div class="spec"><dt>Entrega</dt><dd>Nuitka + MinGW → <code>.exe</code> · instalador Inno Setup · release no GitHub</dd></div>
+          <div class="spec"><dt>Versão</dt><dd>1.2 — atualização automática pelo próprio app</dd></div>
+        </dl>
+      </div>
+
+      <ul class="points points--3">
+        <li><b>A conta é sempre do servidor</b>Peça = custo de compra × (1 + margem). Total, lucro e saldo nunca chegam prontos do navegador — o backend recalcula tudo.</li>
+        <li><b>O histórico não se mexe</b>Cada item da OS guarda uma cópia do nome e do preço do catálogo. Renomear ou inativar um serviço não reescreve o passado.</li>
+        <li><b>Pagamento em partes</b>Uma OS aceita vários pagamentos, cada um com forma e data própria. O caixa do dia agrupa pela data em que o dinheiro entrou.</li>
+        <li><b>O veículo aprende o KM</b>Ao finalizar, o carro guarda a quilometragem — e ela só avança, nunca volta.</li>
+        <li><b>Dois papéis, um dado</b>O orçamento do cliente mostra preço de venda; a ordem do mecânico mostra o checklist sem preço nenhum.</li>
+        <li><b>Sem biblioteca de PDF</b>São páginas HTML com <code>@media print</code>. Bibliotecas nativas quebram no empacotamento — essa foi uma decisão, não um atalho.</li>
+      </ul>
+
+      <div class="shots" data-shots="garage"></div>
+    </div>
+  </article>
+
+  <!-- ── Arena AMP ── -->
+  <article class="case" id="arena">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">AMP-••••-••••-•••• <span class="badge badge--prod"><i></i>v3.19 em produção</span></p>
+          <h3>Arena AMP</h3>
+          <p class="case__sub">
+            A arena de beach tennis inteira num programa: alunos e turmas,
+            mensalidade parcela a parcela, crédito de reposição, comanda do bar
+            com estoque e ranking dos campeonatos.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Cliente</dt><dd>Arena de beach tennis · instalado e licenciado</dd></div>
+          <div class="spec"><dt>Módulos</dt><dd><b>Aulas</b>, comandas, ranking, relatórios</dd></div>
+          <div class="spec"><dt>Backend</dt><dd>Flask · SQLAlchemy · SQLite local</dd></div>
+          <div class="spec"><dt>Extra</dt><dd>Sincroniza o módulo Aulas com a nuvem (ver <a href="#sync">arena-sync</a>)</dd></div>
+          <div class="spec"><dt>Origem</dt><dd>Foi daqui que saiu a espinha dorsal reaproveitada nos outros produtos</dd></div>
+        </dl>
+      </div>
+
+      <ul class="points points--3">
+        <li><b>Status que ninguém digita</b>Paga, vencida ou a vencer é sempre deduzido de <code>pago_em</code> + vencimento. Guardar o status seria guardar uma mentira que envelhece.</li>
+        <li><b>Plano vira parcelas</b>Um plano de 6 meses cria 6 linhas com competência e vencimento próprios. Renovar abre um ciclo novo em vez de sobrescrever o antigo.</li>
+        <li><b>Falta vira crédito</b>Quem falta ganha saldo de reposição com validade — e o saldo aparece do lado do nome na lista.</li>
+        <li><b>Comanda e estoque juntos</b>Produto fracionado (a garrafa que vira dose) desconta do volume certo ao fechar a comanda.</li>
+        <li><b>Caixa com abertura</b>A sessão de caixa registra fundo de troco, quem abriu e quem fechou.</li>
+        <li><b>Auditoria compartilhada</b>Tudo que a equipe faz pelo celular aparece no “Atividades” do dono, com o nome de quem fez.</li>
+      </ul>
+
+      <div class="shots" data-shots="arena"></div>
+    </div>
+  </article>
+
+  <!-- ── License server ── -->
+  <article class="case" id="licencas">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">pg-systems-licencas <span class="badge badge--prod"><i></i>Em produção</span></p>
+          <h3>Servidor de licença<br>e painel do estúdio</h3>
+          <p class="case__sub">
+            O único serviço que todos os produtos consultam. Ele liga e desliga
+            cada cliente, recebe o pagamento, decide qual é a versão mínima e
+            entrega o instalador novo. Um produto nunca enxerga os dados do outro.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Papel</dt><dd>Licença · cobrança · atualização · auditoria · backup</dd></div>
+          <div class="spec"><dt>Backend</dt><dd>Flask · Postgres (Supabase) · deploy no Render</dd></div>
+          <div class="spec"><dt>Assinatura</dt><dd>Ed25519 — o app reverifica o payload sozinho, offline</dd></div>
+          <div class="spec"><dt>Pagamento</dt><dd>Mercado Pago: checkout avulso e assinatura recorrente, com webhook idempotente</dd></div>
+          <div class="spec"><dt>Multi-produto</dt><dd>Uma lista <code>PRODUCTS</code> é a fonte da verdade: prefixo da chave e módulos de cada sistema</dd></div>
+        </dl>
+      </div>
+
+      <ul class="points points--3">
+        <li><b>O interruptor de cada cliente</b>Uma licença desligada aqui trava o app no próximo contato. É o que separa entregar software de vender software.</li>
+        <li><b>Confiança verificável</b>A resposta vem assinada. Mesmo sem internet por dias, o app confere a assinatura e sabe que aquilo veio mesmo do servidor.</li>
+        <li><b>Pagou, estendeu</b>O webhook do Mercado Pago aplica o pagamento uma vez só — uma tabela de idempotência impede cobrar ou estender em dobro.</li>
+        <li><b>Atualização por produto</b>Subir a <code>min_version</code> do Garage não empurra atualização para o Arena. Cada produto tem o seu ritmo.</li>
+        <li><b>Nada some por acidente</b>Licença apagada é soft-delete; o banco tira snapshot diário em JSON e guarda os últimos 30.</li>
+        <li><b>Migração sem susto</b>Colunas novas entram no boot, sem quebrar o banco que já está rodando lá fora.</li>
+      </ul>
+
+      <div class="shots" data-shots="admin"></div>
+    </div>
+  </article>
+
+  <!-- ── arena-sync ── -->
+  <article class="case" id="sync">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">arena-sync <span class="badge badge--prod"><i></i>Em produção</span></p>
+          <h3>Aulas na nuvem</h3>
+          <p class="case__sub">
+            O problema era simples: a recepção precisava marcar presença pelo
+            celular com o PC do dono desligado. A resposta foi espelhar só o
+            módulo Aulas na nuvem e costurar os dois lados depois.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Acesso</dt><dd>Link próprio da arena, <code>/a/&lt;token&gt;/</code> — PWA na tela inicial do celular</dd></div>
+          <div class="spec"><dt>Isolamento</dt><dd>Um schema Postgres por arena; em dev, um arquivo SQLite por arena</dd></div>
+          <div class="spec"><dt>Token</dt><dd>Derivado da chave de licença — o PC calcula o mesmo, sem precisar combinar nada</dd></div>
+          <div class="spec"><dt>Merge</dt><dd>Registro a registro por <code>sync_uid</code>, mais recente vence — nunca substitui o banco inteiro</dd></div>
+          <div class="spec"><dt>Motor</dt><dd><code>sync_core.py</code> idêntico nos dois repositórios</dd></div>
+        </dl>
+      </div>
+
+      <ul class="points">
+        <li><b>Ninguém perde trabalho</b>Os dois lados editam ao mesmo tempo e o merge é por registro. Um push atrasado não apaga o que foi feito no celular.</li>
+        <li><b>Provisiona sozinho</b>O PC manda a licença já assinada e a nuvem cria o espaço da arena. Não existe cadastro manual no meio.</li>
+        <li><b>Dados que não se cruzam</b>Cada arena vive no seu schema. Não há filtro <code>WHERE cliente_id</code> para alguém esquecer.</li>
+        <li><b>Feito para o celular</b>A tela é a mesma lógica do desktop, redesenhada para o polegar de quem está na recepção.</li>
+      </ul>
+
+      <div class="shots shots--phone" data-shots="sync"></div>
+    </div>
+  </article>
+</section>
+
+<!-- ══ operação ═══════════════════════════════════════════════════════ -->
+<section id="operacao">
+
+  <!-- ── Monitoramento ── -->
+  <article class="case" id="monitoramento">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">monitoramento <span class="badge badge--prod"><i></i>24/7 no PC da base</span></p>
+          <h3>Central de monitoramento</h3>
+          <p class="case__sub">
+            Quando um alarme dispara na casa de um cliente, é este sistema que
+            toca o alerta, abre a ficha do local na frente do operador e registra
+            o que foi feito. Substituiu um software legado e roda como serviço do
+            Windows, sem sair do ar.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Entrada</dt><dd>Eventos Contact ID vindos do receptor IP Intelbras</dd></div>
+          <div class="spec"><dt>Backend</dt><dd>FastAPI · uvicorn · Postgres · WebSocket para o operador</dd></div>
+          <div class="spec"><dt>Front</dt><dd>SPA sem framework e sem CDN — a base não pode depender de internet</dd></div>
+          <div class="spec"><dt>Extras</dt><dd>WhatsApp pelo Playwright · CFTV via go2rtc · acesso remoto por Tailscale</dd></div>
+          <div class="spec"><dt>Operação</dt><dd>Serviço do Windows <code>MonitoramentoPG</code>, com instalador próprio</dd></div>
+        </dl>
+      </div>
+
+      <ul class="points points--3">
+        <li><b>Convive sem interferir</b>Só <em>lê</em> o arquivo de eventos do receptor, de dois em dois segundos. O software da Intelbras e o legado continuam funcionando ao lado.</li>
+        <li><b>Cor é significado</b>Âmbar é alarme, vermelho é pânico, verde é restauração. A regra vale na lista, na ficha e no relatório — é a mesma paleta desta página.</li>
+        <li><b>A agenda vira alerta</b>O sistema sabe a que horas cada local costuma abrir e fechar. “Fora da agenda” e “não abriu” aparecem antes de alguém perguntar.</li>
+        <li><b>Fonte mono para máquina</b>Conta, horário e telefone em JetBrains Mono; texto humano em Inter. Dado de máquina não se lê como frase.</li>
+        <li><b>Fala com o cliente na hora</b>Do popup do alarme sai a mensagem de WhatsApp já escrita, para o contato certo daquele local.</li>
+        <li><b>Sem CDN, sem surpresa</b>Fontes e ícones locais. Se a internet cair na base, a tela do operador continua igual.</li>
+      </ul>
+
+      <div class="shots" data-shots="monit"></div>
+    </div>
+  </article>
+
+  <!-- ── PGporter ── -->
+  <article class="case" id="pgporter">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">PGporter <span class="badge badge--dev"><i></i>Em construção</span></p>
+          <h3>PGporter</h3>
+          <p class="case__sub">
+            Portaria remota e portaria local no mesmo sistema — muda só onde ele
+            roda. O visitante toca, o operador vê a câmera, cadastra e libera a
+            cancela.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Backend</dt><dd>FastAPI · SQLAlchemy · SQLite · barramento de eventos</dd></div>
+          <div class="spec"><dt>Console</dt><dd>Atendimento, visitante recorrente e simulador de equipamentos</dd></div>
+          <div class="spec"><dt>Hardware</dt><dd>Cada aparelho é uma porta; hoje um simulador, amanhã o driver real</dd></div>
+          <div class="spec"><dt>Troca</dt><dd>Uma linha em <code>config/devices.yaml</code></dd></div>
+        </dl>
+      </div>
+
+      <ul class="points">
+        <li><b>O hardware não bloqueia o software</b>Interfone, facial, cancela e leitor de placa foram desenhados como portas. O sistema inteiro já é usável antes de qualquer equipamento chegar.</li>
+        <li><b>Simulador é parte do produto</b>Ele dispara o que os aparelhos fariam — “visitante tocou”, “placa lida” — e fica no console, para treinar e para testar.</li>
+        <li><b>O check rápido</b>Visitante recorrente aparece com foto, vínculo e histórico. O operador confere e libera sem recadastrar.</li>
+        <li><b>A lista de material sai do código</b>Um script gera a planilha de equipamentos a partir da configuração — o orçamento acompanha o projeto.</li>
+      </ul>
+
+      <div class="shots" data-shots="porter"></div>
+    </div>
+  </article>
+
+  <!-- ── MyIp ── -->
+  <article class="case" id="myip">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">MyIp <span class="badge badge--dev"><i></i>Ferramenta interna</span></p>
+          <h3>MyIp</h3>
+          <p class="case__sub">
+            Painel de rede para Windows: conexões ativas com o processo dono,
+            portas em escuta, DNS, vizinhos da LAN e uma varredura que pontua o
+            risco de 0 a 100.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Stack</dt><dd>Node · Express · consultas via PowerShell</dd></div>
+          <div class="spec"><dt>Análise</dt><dd>Portas de risco expostas, binário em pasta suspeita, executável sem assinatura, beaconing</dd></div>
+          <div class="spec"><dt>Privacidade</dt><dd>Varredura local por padrão; geolocalização e reputação só se você ligar</dd></div>
+          <div class="spec"><dt>Escopo</dt><dd>Somente leitura. A limpeza mexe apenas em cache de DNS e ARP, com confirmação</dd></div>
+        </dl>
+      </div>
+
+      <p class="nocap">
+        <b>Sem print aqui, de propósito.</b> A tela do MyIp é a rede real da máquina
+        em que ele está rodando: IPs internos, nomes de dispositivos e processos
+        em execução. Não é o tipo de coisa que se publica num portfólio — mostro
+        rodando numa conversa.
+      </p>
+    </div>
+  </article>
+
+  <!-- ── AMT ── -->
+  <article class="case" id="amt">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">amt_automacao.py <span class="badge badge--dev"><i></i>Ferramenta interna</span></p>
+          <h3>Automação do AMT Remoto</h3>
+          <p class="case__sub">
+            O programa das centrais Intelbras não tem API. Então a automação
+            opera a tela: abre o executável, faz o login e segue o passo a passo
+            que a operação precisa repetir todo dia.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Stack</dt><dd>Python · PyAutoGUI · Pillow · OpenCV · pygetwindow</dd></div>
+          <div class="spec"><dt>Alvo</dt><dd>Intelbras AMT Remoto v6.0.9.49 no Windows 11</dd></div>
+          <div class="spec"><dt>Achado</dt><dd>Escala de tela de 125% desalinhava todo clique</dd></div>
+          <div class="spec"><dt>Correção</dt><dd><code>SetProcessDPIAware()</code> na primeira linha — janela e screenshot passam a falar em pixels físicos</dd></div>
+        </dl>
+      </div>
+
+      <p class="nocap">
+        <b>O que esse projeto ensinou.</b> Automação de tela quebra em silêncio: o
+        clique cai três pixels ao lado e nada avisa. O documento de passagem do
+        projeto registra a resolução, a escala de tela e como remedir cada
+        coordenada em outra máquina — porque o próximo a mexer nisso vai precisar.
+      </p>
+    </div>
+  </article>
+</section>
+
+<!-- ══ web ════════════════════════════════════════════════════════════ -->
+<section class="lane-light" id="web">
+  <div class="wrap lane-light__head">
+    <div class="sec__head">
+      <p class="eyebrow">Web</p>
+      <h2 class="h-sec">O lado que o cliente final vê.</h2>
+      <p class="lede">
+        Aqui o trabalho muda de natureza: não é operação, é marca. Site que
+        carrega rápido, funciona no celular e transforma visita em orçamento.
+      </p>
+    </div>
+  </div>
+
+  <!-- ── Site PG ── -->
+  <article class="case" id="site-pg">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key" style="color:var(--paper-ink-2)">site-pg <span class="badge badge--web" style="color:#0369A1"><i></i>No ar</span></p>
+          <h3>PG Segurança Eletrônica</h3>
+          <p class="case__sub">
+            Site institucional da empresa de segurança: câmeras, alarme, cerca
+            elétrica, rede e monitoramento 24h. Escrito à mão, sem framework,
+            para carregar rápido em 4G no meio de uma obra.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Stack</dt><dd>HTML · CSS com design tokens · JS sem dependências</dd></div>
+          <div class="spec"><dt>Hospedagem</dt><dd>Netlify · domínio no registro.br</dd></div>
+          <div class="spec"><dt>Contato</dt><dd>Formulário via Formspree — sem backend para manter</dd></div>
+          <div class="spec"><dt>Conformidade</dt><dd>Banner de cookies e política de privacidade (LGPD)</dd></div>
+          <div class="spec"><dt>Busca</dt><dd><code>sitemap.xml</code>, <code>robots.txt</code> e headers próprios</dd></div>
+        </dl>
+      </div>
+      <div class="shots" data-shots="sitepg"></div>
+    </div>
+  </article>
+
+  <!-- ── siteAMP React ── -->
+  <article class="case" id="siteamp">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key" style="color:var(--paper-ink-2)">arena-beach-tennis <span class="badge badge--web" style="color:#0369A1"><i></i>No ar</span></p>
+          <h3>Arena AMP — site</h3>
+          <p class="case__sub">
+            A segunda vida do site da arena, agora em React. Agendamento, day
+            use, aulas, bar, eventos, planos e uma área de prestador — tudo em
+            componentes, com a mesma marca do sistema desktop.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Stack</dt><dd>React 19 · Vite · Tailwind 4 · React Router · AOS</dd></div>
+          <div class="spec"><dt>Estrutura</dt><dd>Hero, modalidades, aulas, bar, eventos, planos, avaliações, FAQ</dd></div>
+          <div class="spec"><dt>Robustez</dt><dd><code>ErrorBoundary</code> próprio — uma seção quebrada não derruba a página</dd></div>
+          <div class="spec"><dt>Conformidade</dt><dd>Banner de cookies com aviso de LGPD</dd></div>
+        </dl>
+      </div>
+      <div class="shots" data-shots="siteamp"></div>
+    </div>
+  </article>
+
+  <!-- ── Site Arena legado ── -->
+  <article class="case" id="site-arena">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key" style="color:var(--paper-ink-2)">SiteArenaAMP <span class="badge badge--web" style="color:#0369A1"><i></i>Arquivado</span></p>
+          <h3>Arena AMP — primeira versão</h3>
+          <p class="case__sub">
+            O começo de tudo: HTML, CSS e JavaScript escritos na mão, com header
+            e footer carregados como partials, catálogo do bar, day use e área de
+            patrocinadores. É de onde veio a identidade da marca.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Stack</dt><dd>HTML · CSS · JS puro · <code>loadLayout.js</code> para os partials</dd></div>
+          <div class="spec"><dt>Páginas</dt><dd>Home, day use, catálogo, clube, horários</dd></div>
+          <div class="spec"><dt>Por que fica aqui</dt><dd>Foi o primeiro contato com este cliente — e virou o sistema desktop depois</dd></div>
+        </dl>
+      </div>
+      <div class="shots" data-shots="sitearena"></div>
+    </div>
+  </article>
+</section>
+
+<!-- ══ stack ══════════════════════════════════════════════════════════ -->
+<section class="sec" id="stack">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Ferramentas</p>
+      <h2 class="h-sec">O que uso, e para quê.</h2>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-col">
+        <h4>Backend</h4>
+        <ul>
+          <li>Python · Flask · FastAPI</li>
+          <li>SQLAlchemy · SQLite · PostgreSQL</li>
+          <li>WebSocket · REST</li>
+          <li>Node · Express</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h4>Front</h4>
+        <ul>
+          <li>HTML e CSS sem framework</li>
+          <li>JavaScript puro (SPA na mão)</li>
+          <li>React 19 · Vite · Tailwind</li>
+          <li>PWA · layout para celular</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h4>Entrega</h4>
+        <ul>
+          <li>Nuitka + MinGW → executável</li>
+          <li>Inno Setup · release no GitHub</li>
+          <li>Render · Supabase · Netlify</li>
+          <li>Serviço do Windows · Tailscale</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h4>Produto</h4>
+        <ul>
+          <li>Licenciamento Ed25519</li>
+          <li>Mercado Pago (avulso e recorrente)</li>
+          <li>Atualização automática por produto</li>
+          <li>Backup, auditoria e migração no boot</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ contato ════════════════════════════════════════════════════════ -->
+<footer class="foot" id="contato">
+  <div class="wrap">
+    <p class="eyebrow">Contato</p>
+    <h2>Se o seu negócio precisa de um sistema, eu construo o seu.</h2>
+    <p class="lede">
+      Trabalho do levantamento à instalação: entendo a operação, desenho os
+      módulos, entrego o instalador e continuo mantendo. Se preferir começar
+      pequeno, dá para atacar só o módulo que mais dói hoje.
+    </p>
+    <div class="foot__links">
+      <a class="foot__link foot__link--main" href="mailto:SEU-EMAIL@exemplo.com">E-mail →</a>
+      <a class="foot__link" href="https://github.com/feernandopg" target="_blank" rel="noopener">GitHub · feernandopg</a>
+      <a class="foot__link" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="foot__link" href="https://www.linkedin.com/in/SEU-PERFIL" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="foot__meta">
+      <span>Fernando Prestes Godinho · PG SYSTEMS</span>
+      <span>São Roque · SP · Brasil</span>
+      <span>Prints com dados fictícios</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ lightbox ═══════════════════════════════════════════════════════ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Tela ampliada">
+  <button class="lb__x" id="lb-x" type="button" aria-label="Fechar">✕</button>
+  <button class="lb__nav lb__nav--prev" id="lb-prev" type="button" aria-label="Tela anterior">←</button>
+  <button class="lb__nav lb__nav--next" id="lb-next" type="button" aria-label="Próxima tela">→</button>
+  <img id="lb-img" alt="">
+  <p class="lb__cap" id="lb-cap"></p>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
