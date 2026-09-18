@@ -207,10 +207,11 @@
       ['erp-relatorios', 'Relatórios', 'Resultado do mês por categoria — um dos seis relatórios', 1]
     ],
     monit: [
-      ['monit-dashboard', 'Painel central', 'Painel central · centrais, agenda e sinal'],
-      ['monit-popup', 'Atendimento', 'Atendimento do alarme · WhatsApp já escrito'],
-      ['monit-eventos', 'Eventos', 'Histórico de eventos'],
-      ['monit-dash2', 'Canal WhatsApp', 'Painel com o canal de WhatsApp'],
+      ['monit-popup', 'Atendimento', 'Alarme de intrusão: ficha do local, procedimento e contatos por prioridade', 1],
+      ['monit-dashboard', 'Painel central', 'Painel de centrais — online, offline, armadas e sinal por conta'],
+      ['monit-eventos', 'Eventos', 'Histórico com filtro por prioridade: alarme, acesso, sistema'],
+      ['monit-clientes', 'Clientes', 'Cadastro do local: zonas, contatos, agenda e procedimentos'],
+      ['monit-relatorios', 'Relatórios', 'Relatórios da operação'],
       ['monit-login', 'Entrada', 'Acesso restrito à central']
     ],
     porter: [
