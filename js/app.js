@@ -174,12 +174,15 @@
       ['garage-login', 'Entrada', 'Tela de entrada']
     ],
     arena: [
-      ['arena-hub', 'Hub', 'Hub da arena'],
-      ['arena-aulas', 'Aulas', 'Aulas · alunos, plano e saldo de reposição'],
-      ['arena-comandas', 'Comandas', 'Comandas em aberto e pagas'],
-      ['arena-ranking', 'Ranking', 'Ranking dos jogadores'],
+      ['arena-hub', 'Hub', 'Hub da arena — o dono escolhe o módulo'],
+      ['arena-aulas', 'Aulas', 'Alunos, plano parcela a parcela e saldo de reposição'],
+      ['arena-comandas', 'Comandas', 'Comandas em aberto e pagas, com o caixa do dia'],
+      ['arena-comanda-leitor', 'Leitor', 'Comanda aberta: passa o leitor de código de barras e o item entra sozinho'],
+      ['arena-cupom', 'Cupom', 'Cupom de 44 mm para térmica, com a logo da arena', 1],
+      ['arena-estoque', 'Estoque', 'Estoque do bar e da loja, com código de barras por produto'],
+      ['arena-ranking', 'Ranking', 'Ranking dos jogadores por categoria'],
       ['arena-relatorios', 'Relatórios', 'Relatórios da arena'],
-      ['arena-config', 'Configurações', 'Configurações e nuvem'],
+      ['arena-config', 'Configurações', 'Configurações, usuários e nuvem'],
       ['arena-login', 'Entrada', 'Tela de entrada']
     ],
     admin: [
