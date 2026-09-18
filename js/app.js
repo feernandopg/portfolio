@@ -194,6 +194,15 @@
       ['sync-aulas-mobile', 'Aulas na nuvem', 'Aulas na nuvem, no celular da recepção'],
       ['sync-login-mobile', 'Acesso', 'Acesso pelo link da arena']
     ],
+    erp: [
+      ['erp-painel', 'Painel', 'Painel do mês — resultado, OS abertas e reajustes a decidir'],
+      ['erp-clientes', 'Clientes', 'Cadastro com documento validado, contrato e OS por cliente'],
+      ['erp-contratos', 'Contratos', 'Contratos e o aviso de reajuste esperando decisão'],
+      ['erp-os', 'Ordens', 'Ordem de serviço com técnico, situação e valor'],
+      ['erp-caixa', 'Fluxo de caixa', 'Previsto × realizado, dia a dia'],
+      ['erp-estoque', 'Estoque', 'Saldo, mínimo e custo médio por peça'],
+      ['erp-relatorios', 'Relatórios', 'Resultado do mês por categoria — um dos seis relatórios', 1]
+    ],
     monit: [
       ['monit-dashboard', 'Painel central', 'Painel central · centrais, agenda e sinal'],
       ['monit-popup', 'Atendimento', 'Atendimento do alarme · WhatsApp já escrito'],

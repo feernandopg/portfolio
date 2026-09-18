@@ -892,3 +892,10 @@ h1, h2, h3, h4 {
 @media (max-width: 400px) {
   .nav__brand span:not(.nav__dot) { display: none; }
 }
+
+
+/* ── sobre mim ─────────────────────────────────────────────────────── */
+.sobre{max-width:62ch;display:grid;gap:1.05rem}
+.sobre p{margin:0;font-size:1.02rem;line-height:1.72;color:var(--ink-2,#B9C2BF)}
+.sobre p:first-child{font-size:1.14rem;color:var(--ink,#E8EDEB)}
+@media (max-width:720px){.sobre p{font-size:.98rem}}

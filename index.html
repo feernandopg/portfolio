@@ -27,6 +27,7 @@
       <a href="#produtos">Produtos</a>
       <a href="#operacao">Operação</a>
       <a href="#web">Web</a>
+      <a href="#sobre">Sobre mim</a>
       <a class="nav__cta" href="#contato">Falar comigo</a>
     </div>
   </div>
@@ -48,7 +49,7 @@
         <div class="fact"><b>3</b><span>produtos em produção</span></div>
         <div class="fact"><b>24/7</b><span>central de alarmes ativa</span></div>
         <div class="fact"><b>1</b><span>servidor de licença</span></div>
-        <div class="fact"><b>10</b><span>projetos neste índice</span></div>
+        <div class="fact"><b>11</b><span>projetos neste índice</span></div>
       </div>
     </div>
 
@@ -71,7 +72,7 @@
   <div class="wrap">
     <div class="sec__head">
       <p class="eyebrow">Índice</p>
-      <h2 class="h-sec">Dez projetos, três formas de entregar.</h2>
+      <h2 class="h-sec">Onze projetos, três formas de entregar.</h2>
       <p class="lede">
         Quatro produtos licenciados que instalam no cliente, quatro sistemas de
         operação que rodam na base e duas frentes de web. Clique numa linha para
@@ -131,6 +132,13 @@
           <td><div class="t-name">Central de monitoramento</div><div class="t-desc">Recebe o alarme, chama o operador, registra o atendimento</div></td>
           <td class="t-stack col-stack">FastAPI · Postgres · WebSocket · Contact ID</td>
           <td><span class="badge badge--prod"><i></i>24/7 na base</span></td>
+          <td class="t-arrow" aria-hidden="true">→</td>
+        </tr>
+        <tr data-cat="operacao" data-go="erp">
+          <td class="t-key">pg-erp</td>
+          <td><div class="t-name">ERP da operação</div><div class="t-desc">Contratos, ordens de serviço, financeiro e estoque</div></td>
+          <td class="t-stack col-stack">FastAPI · PostgreSQL · Argon2id · TOTP</td>
+          <td><span class="badge badge--dev"><i></i>Em desenvolvimento</span></td>
           <td class="t-arrow" aria-hidden="true">→</td>
         </tr>
         <tr data-cat="operacao" data-go="pgporter">
@@ -400,6 +408,43 @@
     </div>
   </article>
 
+  <!-- ── ERP P&G ── -->
+  <article class="case" id="erp">
+    <div class="wrap">
+      <div class="case__top">
+        <div>
+          <p class="case__key">pg-erp <span class="badge badge--dev"><i></i>Em desenvolvimento</span></p>
+          <h3>ERP da operação</h3>
+          <p class="case__sub">
+            O outro lado da mesma empresa: enquanto o monitoramento cuida do
+            alarme, este cuida do dinheiro. Cliente, contrato, ordem de serviço,
+            financeiro, estoque e os relatórios que dizem se o mês fechou no azul.
+            Divide a máquina com o monitoramento e mais nada — banco próprio,
+            serviço próprio, cadastro próprio.
+          </p>
+        </div>
+        <dl class="specs">
+          <div class="spec"><dt>Backend</dt><dd>FastAPI · psycopg 3 com pool · PostgreSQL 18</dd></div>
+          <div class="spec"><dt>Front</dt><dd>HTML, CSS e JS na mão — sem framework, sem build, sem CDN</dd></div>
+          <div class="spec"><dt>Acesso</dt><dd>Argon2id · segundo fator TOTP · sessão no servidor, revogável na hora</dd></div>
+          <div class="spec"><dt>Rede</dt><dd>Escuta só na interface do Tailscale — nunca em <code>0.0.0.0</code></dd></div>
+          <div class="spec"><dt>Tamanho</dt><dd>21 tabelas · ~64 rotas · 10 módulos</dd></div>
+        </dl>
+      </div>
+
+      <ul class="points points--3">
+        <li><b>Entrada e saída na mesma tabela</b>Com vencimento e liquidação em campos separados. Fluxo de caixa, resultado do mês e previsto × realizado viram uma consulta só, em vez de três com <code>UNION</code>.</li>
+        <li><b>Banco e nota construídos, ainda não ligados</b>A cobrança pelo Sicredi e a NFS-e pelo Emissor Nacional estão escritas atrás de adaptadores. O que falta é de fora: contratar a API na cooperativa e comprar o certificado A1. Ligar é trocar uma palavra no config — nenhuma tela muda.</li>
+        <li><b>Zero <code>innerHTML</code></b>Todo texto vira nó de texto por um <code>h()</code>. A defesa contra XSS é por construção, não por lembrança de quem escreve — e se confere com um <code>grep</code>.</li>
+        <li><b>Reajuste avisa, não aplica</b>O sistema calcula o ciclo e sugere o valor. Quem aceita, edita ou recusa é a gerência — e a resposta fica gravada, para o aviso não voltar amanhã.</li>
+        <li><b>Nada some de verdade</b>Exclusão é lógica em tudo que é financeiro ou fiscal, e cada criação, baixa e estorno entra no log de auditoria com usuário e hora.</li>
+        <li><b>Documento conferido no servidor</b>CPF e CNPJ passam pelo dígito verificador antes de gravar. Validação no navegador é conveniência; quem ataca não usa o seu formulário.</li>
+      </ul>
+
+      <div class="shots" data-shots="erp"></div>
+    </div>
+  </article>
+
   <!-- ── PGporter ── -->
   <article class="case" id="pgporter">
     <div class="wrap">
@@ -601,6 +646,67 @@
           <li>Backup, auditoria e migração no boot</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ como eu trabalho ═══════════════════════════════════════════════ -->
+<section class="sec" id="metodo">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Método</p>
+      <h2 class="h-sec">Velocidade de IA, critério meu.</h2>
+      <p class="lede">
+        Escrevo estes sistemas com desenvolvimento assistido por IA, e acho que
+        vale dizer isso em voz alta em vez de fingir o contrário. O que a IA me
+        dá é velocidade. O que continua sendo meu é decidir o que construir,
+        conferir o que saiu e responder pelo que entrou em produção.
+      </p>
+    </div>
+
+    <ul class="points points--3">
+      <li><b>O ERP em dois dias</b>21 tabelas, ~64 rotas e 10 módulos entre 16 e 17 de setembro de 2026. Essa é a parte que a IA acelera — e é boa.</li>
+      <li><b>Onze auditorias datadas nas mesmas 48 horas</b>Cada entrega de módulo passa por um checklist de 12 itens, e o resultado fica escrito no <code>DOCS/</code> com data e escopo. Essa é a parte que não dá para terceirizar.</li>
+      <li><b>Duas auditorias acharam bug de verdade</b>Uma conversão de data em UTC que, depois das 21h, gravava vencimento do dia seguinte num sistema financeiro. E um pacote local chamado <code>os/</code> sombreando a biblioteca padrão do Python.</li>
+      <li><b>Registro o que escolhi não fazer</b>A automação do alarme recusa pedido concorrente com <code>409</code> em vez de enfileirar — fila causaria uma ação-surpresa segundos depois, possivelmente no cliente errado. Isso é decisão de quem conhece a operação.</li>
+      <li><b>Leio o que vai junto</b>Ao versionar o sistema de monitoramento, o <code>.gitignore</code> barrou um despejo do banco do alarme com nome de cliente e senha de central — antes do primeiro commit, que é quando ainda dá para consertar sem reescrever histórico.</li>
+      <li><b>Prévia antes de mexer</b>Mudança de tela vai ao dono como prévia visual antes de virar código, e todo script de manutenção roda em modo prévia por padrão. Produção de alarme não é lugar de descobrir na hora.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ sobre mim ══════════════════════════════════════════════════════ -->
+<section class="sec" id="sobre">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Sobre mim</p>
+      <h2 class="h-sec">Eu instalo a câmera e escrevo o sistema que recebe o alarme dela.</h2>
+    </div>
+    <div class="sobre">
+      <p>
+        Sou o Fernando, de São Roque, interior de São Paulo, formado em Análise
+        e Desenvolvimento de Sistemas pela Uniso.
+      </p>
+      <p>
+        Não comecei escrevendo código. Comecei atendendo chamado — suporte N1 e
+        N2, ERP corporativo, rede que cai na sexta à tarde. Foram dois anos e meio
+        de rotina administrativa e depois sete meses de TOTVS Protheus, até entrar
+        na Prestes &amp; Godinho, que faz segurança eletrônica. Foi ali que os dois
+        lados se juntaram: de manhã eu subo numa escada para passar cabo de câmera,
+        e à tarde escrevo o sistema que vai receber o evento daquele alarme.
+      </p>
+      <p>
+        Isso muda o software que eu faço. Quando decidi que o evento de simulação
+        não vai para o banco, foi porque eu já tinha visto o histórico de um
+        cliente sujo de teste. Quando o painel recusa dois comandos ao mesmo
+        tempo, é porque eu sei o que significa armar a central errada. Não são
+        escolhas de arquitetura bonitas no papel — são cicatrizes de operação.
+      </p>
+      <p>
+        O que eu procuro agora é lugar onde isso serve: time onde entender o
+        problema conta tanto quanto escrever a solução, e onde dá para levar uma
+        coisa do incidente até o deploy sem passar por cinco pessoas.
+      </p>
     </div>
   </div>
 </section>
