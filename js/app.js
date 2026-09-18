@@ -215,11 +215,6 @@
       ['siteamp-desktop-full', 'Página inteira', 'A home de ponta a ponta', 1],
       ['siteamp-mobile', 'Celular', 'A mesma home no celular']
     ],
-    sitearena: [
-      ['site-arena', 'Home', 'Home da primeira versão'],
-      ['site-arena-dayuse', 'Day Use', 'Página de Day Use'],
-      ['site-arena-full', 'Página inteira', 'A home de ponta a ponta', 1]
-    ]
   };
 
   var atual = { lista: [], i: 0 };
