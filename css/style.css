@@ -644,14 +644,21 @@ h1, h2, h3, h4 {
 .shots { margin-top: 38px; }
 .shots__stage {
   position: relative;
+  /* proporção travada: sem isto, trocar um print largo por um de página
+     inteira mudava a altura do palco e empurrava o resto da página */
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
   border: 1px solid var(--line-2);
   border-radius: var(--r);
   background: var(--ground-2);
   overflow: hidden;
 }
 .lane-light .shots__stage { border-color: var(--paper-line); background: var(--paper-2); }
-.shots__stage img { width: 100%; cursor: zoom-in; }
-.shots__stage img.is-tall { max-height: 74vh; width: auto; margin: 0 auto; }
+.shots__stage img { width: 100%; height: 100%; object-fit: contain; cursor: zoom-in; }
+/* print de página inteira: mostra o topo preenchendo o palco; o inteiro
+   abre no lightbox ao clicar */
+.shots__stage img.is-tall { object-fit: cover; object-position: center top; }
 .shots__cap {
   position: absolute;
   left: 0; bottom: 0;
@@ -883,7 +890,7 @@ h1, h2, h3, h4 {
   .spec dt { padding-top: 0; }
 
   .shots__cap { position: static; width: 100%; border-radius: 0; }
-  .shots__stage img.is-tall { max-height: 62vh; }
+  .shots__stage { aspect-ratio: 4 / 3; }
 
   .foot__link { font-size: 10.5px; padding: 11px 14px; }
   .foot__meta { flex-direction: column; gap: 8px; }
